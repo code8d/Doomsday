@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap");
 body, a, ul, li, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -10,7 +11,7 @@ body {
 
 /* Container */
 ._container {
-  max-width: 1200px;
+  max-width: 1120px;
   padding: 0 15px;
   margin: 0 auto;
   -webkit-box-sizing: content-box;
@@ -51,4 +52,47 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.header {
+  background: #1C1C1C;
+}
+
+.header-block {
+  height: 70px;
+  padding: 0 25px;
+}
+
+.logo-block {
+  max-width: 122px;
+  min-height: 31px;
+}
+.logo-block .logo {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.nav__list > * {
+  margin: 0 6px 0 7px;
+}
+
+.list__item {
+  list-style-type: none;
+}
+.list__item .item__link {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Rubik";
+  font-size: 18px;
+  padding: 2px 6px;
+}
+.list__item .item__link_noPadding {
+  padding-right: 0;
+}
+.list__item:last-child {
+  margin: 0 0 0 6px;
+}
+
+body {
+  font-family: "Rubik";
 }
