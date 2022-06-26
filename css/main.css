@@ -72,7 +72,7 @@ body {
   font-size: 20px;
   font-weight: 400;
   color: #D10001;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .title::before {
   display: block;
@@ -184,6 +184,9 @@ body {
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
 }
+.main .section3 .section3-block .card-block .card-item .name-block .card__name {
+  font-size: 16px;
+}
 .main .section3 .section3-block .card-block .card-item:not(:last-child) {
   margin: 0 21px 0 0;
 }
@@ -238,13 +241,16 @@ body {
   height: 70px;
 }
 .footer-block .social-block > *:not(:last-child) {
-  margin: 0 15px 0 0;
+  margin: 0 10px 0 0;
 }
 .footer-block .social-block .icon-block {
   display: block;
   width: 30px;
   height: 30px;
   padding: 5px;
+}
+.footer-block .social-block .icon-block:last-child {
+  padding: 5px 0 5px 5px;
 }
 .footer-block .social-block .icon-block .icon {
   max-width: 100%;

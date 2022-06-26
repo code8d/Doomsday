@@ -8,7 +8,7 @@
         font-size: 20px;
         font-weight: 400;
         color: #D10001;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         &::before {
             display: block;
             content: "";
@@ -111,7 +111,7 @@
                         background: rgba(0, 0, 0, .6);
                         color: #fff;
                         .card__name {
-        
+                            font-size: 16px;
                         }
                     }
                     &:not(:last-child) {
@@ -163,13 +163,16 @@
     .social-block {
         height: 70px;
         & > *:not(:last-child) {
-            margin: 0 15px 0 0;
+            margin: 0 10px 0 0;
         }
         .icon-block {
             display: block;
             width: 30px;
             height: 30px;
             padding: 5px;
+            &:last-child {
+                padding: 5px 0 5px 5px;
+            }
             .icon {
                 max-width: 100%;
                 min-height: 100%;
