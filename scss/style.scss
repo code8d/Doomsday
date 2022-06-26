@@ -107,6 +107,8 @@
                         display: block;
 /*                         margin: 0 11px; */
                         flex: 0 0 33.333%;
+                        transition: .3s ease-in-out;
+                        overflow: hidden;
                         .name-block {
                             position: absolute;
                             top: 0;
@@ -114,19 +116,35 @@
                             padding: 10px 15px;
                             background: rgba(0, 0, 0, .6);
                             color: #fff;
+                            z-index: 1;
                             .card__name {
                                 font-size: 16px;
                             }
                         }
                         .img-block {
+                            position: relative;
                             max-width: 100%;
                             min-height: 100%;
+                            z-index: 0;
+                            transition: .3s ease-in-out;
                             .image {
                                 max-width: 100%;
                                 max-height: 100%;
                                 object-fit: cover;
                             }
                         }
+                    }
+                    .card-item:hover .img-block {
+                        transform: scale(1.1);
+                        transition: .3s ease-in-out;
+                    }
+                    &:hover .card-item {
+                        opacity: .4;
+                        transition: .3s ease-in-out;
+                    }
+                    &:hover .card-item:hover {
+                        opacity: 1;
+                        transition: 0.3 ease-in-out;
                     }
                 }
             }
@@ -261,55 +279,58 @@
             flex: 1 1 70px;
             background: #1C1C1C;
             box-shadow: 0 0 10px 5px rgba(0, 0, 0, .15);
-            .header-block {
-                height: 70px;
-                padding: 0 10px 0 20px;
-                .logo-block {
-                    max-width: 122px;
-                    min-height: 31px;
-                    .logo {
-                        max-width: 100%;
-                        max-height: 100%;
-                    }
-                }
-                .header__nav-block {
-                    .nav__list {
-                        display: none;
-                        & > * {
-                            margin: 0 6px 0 7px;
-                        }
-                        .list__item {
-                            list-style-type: none;
-                            .item__link {
-                                color: #fff;
-                                text-decoration: none;
-                                font-family: 'Rubik';
-                                font-size: 18px;
-                                padding: 2px 6px;
-                            }
-                            .item__link_noPadding {
-                                padding-right: 0;
-                            }
-                            &:last-child {
-                                margin: 0 0 0 6px;
-                            }
+            ._container {
+                padding: 0 5px 0 15px;
+                .header-block {
+                    height: 70px;
+                    padding: 0;
+                    .logo-block {
+                        max-width: 122px;
+                        min-height: 31px;
+                        .logo {
+                            max-width: 100%;
+                            max-height: 100%;
                         }
                     }
-                    .hamburger-block {
-                        display: flex;
-                        flex-direction: column;
-                        padding: 5px 10px;
-                        & > *:not(:last-child) {
-                            margin: 0 0 5px 0;
+                    .header__nav-block {
+                        .nav__list {
+                            display: none;
+                            & > * {
+                                margin: 0 6px 0 7px;
+                            }
+                            .list__item {
+                                list-style-type: none;
+                                .item__link {
+                                    color: #fff;
+                                    text-decoration: none;
+                                    font-family: 'Rubik';
+                                    font-size: 18px;
+                                    padding: 2px 6px;
+                                }
+                                .item__link_noPadding {
+                                    padding-right: 0;
+                                }
+                                &:last-child {
+                                    margin: 0 0 0 6px;
+                                }
+                            }
                         }
-                        .item {
-                            display: block;
-                            width: 25px;
-                            height: 3px;
-                            background: #fff;
-                            border-radius: 50px;
-                        }
-                    }   
+                        .hamburger-block {
+                            display: flex;
+                            flex-direction: column;
+                            padding: 5px 10px;
+                            & > *:not(:last-child) {
+                                margin: 0 0 5px 0;
+                            }
+                            .item {
+                                display: block;
+                                width: 25px;
+                                height: 3px;
+                                background: #fff;
+                                border-radius: 50px;
+                            }
+                        }   
+                    }
                 }
             }
         }
@@ -433,8 +454,7 @@
                             .name-block {
                                 position: absolute;
                                 top: auto;
-                                top: 0;
-                                bottom: auto;
+                                bottom: 0;
                                 right: 0;
                                 padding: 10px 15px;
                                 background: rgba(0, 0, 0, .6);

@@ -180,6 +180,9 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 33.333%;
           flex: 0 0 33.333%;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
 }
 .main .section3 .section3-block .card-block .card-item .name-block {
   position: absolute;
@@ -188,19 +191,40 @@ body {
   padding: 10px 15px;
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
+  z-index: 1;
 }
 .main .section3 .section3-block .card-block .card-item .name-block .card__name {
   font-size: 16px;
 }
 .main .section3 .section3-block .card-block .card-item .img-block {
+  position: relative;
   max-width: 100%;
   min-height: 100%;
+  z-index: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .main .section3 .section3-block .card-block .card-item .img-block .image {
   max-width: 100%;
   max-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.main .section3 .section3-block .card-block .card-item:hover .img-block {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.main .section3 .section3-block .card-block:hover .card-item {
+  opacity: 0.4;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.main .section3 .section3-block .card-block:hover .card-item:hover {
+  opacity: 1;
+  -webkit-transition: 0.3 ease-in-out;
+  transition: 0.3 ease-in-out;
 }
 .main .section4-block {
   padding: 20px;
@@ -339,41 +363,44 @@ body {
     -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15);
             box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15);
   }
-  .header .header-block {
-    height: 70px;
-    padding: 0 10px 0 20px;
+  .header ._container {
+    padding: 0 5px 0 15px;
   }
-  .header .header-block .logo-block {
+  .header ._container .header-block {
+    height: 70px;
+    padding: 0;
+  }
+  .header ._container .header-block .logo-block {
     max-width: 122px;
     min-height: 31px;
   }
-  .header .header-block .logo-block .logo {
+  .header ._container .header-block .logo-block .logo {
     max-width: 100%;
     max-height: 100%;
   }
-  .header .header-block .header__nav-block .nav__list {
+  .header ._container .header-block .header__nav-block .nav__list {
     display: none;
   }
-  .header .header-block .header__nav-block .nav__list > * {
+  .header ._container .header-block .header__nav-block .nav__list > * {
     margin: 0 6px 0 7px;
   }
-  .header .header-block .header__nav-block .nav__list .list__item {
+  .header ._container .header-block .header__nav-block .nav__list .list__item {
     list-style-type: none;
   }
-  .header .header-block .header__nav-block .nav__list .list__item .item__link {
+  .header ._container .header-block .header__nav-block .nav__list .list__item .item__link {
     color: #fff;
     text-decoration: none;
     font-family: "Rubik";
     font-size: 18px;
     padding: 2px 6px;
   }
-  .header .header-block .header__nav-block .nav__list .list__item .item__link_noPadding {
+  .header ._container .header-block .header__nav-block .nav__list .list__item .item__link_noPadding {
     padding-right: 0;
   }
-  .header .header-block .header__nav-block .nav__list .list__item:last-child {
+  .header ._container .header-block .header__nav-block .nav__list .list__item:last-child {
     margin: 0 0 0 6px;
   }
-  .header .header-block .header__nav-block .hamburger-block {
+  .header ._container .header-block .header__nav-block .hamburger-block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -383,10 +410,10 @@ body {
             flex-direction: column;
     padding: 5px 10px;
   }
-  .header .header-block .header__nav-block .hamburger-block > *:not(:last-child) {
+  .header ._container .header-block .header__nav-block .hamburger-block > *:not(:last-child) {
     margin: 0 0 5px 0;
   }
-  .header .header-block .header__nav-block .hamburger-block .item {
+  .header ._container .header-block .header__nav-block .hamburger-block .item {
     display: block;
     width: 25px;
     height: 3px;
@@ -530,8 +557,7 @@ body {
   .main .section3 .section3-block .card-block .card-item .name-block {
     position: absolute;
     top: auto;
-    top: 0;
-    bottom: auto;
+    bottom: 0;
     right: 0;
     padding: 10px 15px;
     background: rgba(0, 0, 0, 0.6);
