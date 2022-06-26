@@ -1,15 +1,40 @@
 .wrapper {
+    position: relative;
+    z-index: 0;
     min-height: 100vh;
 }
-
+/* Default */
+.title {
+        font-size: 20px;
+        font-weight: 400;
+        color: #D10001;
+        margin-bottom: 10px;
+        &::before {
+            display: block;
+            content: "";
+            width: 2px;
+            height: 20px;
+            background: #D10001;
+            margin-right: 10px;
+        }
+}
+.text {
+        min-height: 300px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        padding-left: 13px;
+        line-height: 1.3;
+}
+/*  */
 .header {
     flex: 1 1 70px;
     background: #1C1C1C;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, .15);
-}
-.header-block {
-    height: 70px;
-    padding: 0 25px;
+    .header-block {
+        height: 70px;
+        padding: 0 25px;
+    }
 }
 .logo-block {
     max-width: 122px;
@@ -23,27 +48,103 @@
     & > * {
         margin: 0 6px 0 7px;
     }
-}
-.list__item {
-    list-style-type: none;
-    .item__link {
-        color: #fff;
-        text-decoration: none;
-        font-family: 'Rubik';
-        font-size: 18px;
-        padding: 2px 6px;
-    }
-    .item__link_noPadding {
-        padding-right: 0;
-    }
-    &:last-child {
-        margin: 0 0 0 6px;
+    .list__item {
+        list-style-type: none;
+        .item__link {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Rubik';
+            font-size: 18px;
+            padding: 2px 6px;
+        }
+        .item__link_noPadding {
+            padding-right: 0;
+        }
+        &:last-child {
+            margin: 0 0 0 6px;
+        }
     }
 }
 
 .main {
-    flex: 1 1 100vh;
+    flex: 2 1 100vh;
     margin-top: -140px;
+}
+
+.main {
+    position: relative;
+    background: url(../img/content/background.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    .section1 {
+        padding-top: 140px;
+        .section1-block {
+            width: 100%;
+            height: 356px;
+            .cover {
+                width: inherit;
+                min-height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .section2 {
+        .section2-block {
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    }
+    .section3 {
+        .section3-block {
+            padding: 20px;
+            box-sizing: border-box;
+            .card-block {
+                .card-item {
+                    position: relative;
+                    display: block;
+                    .name-block {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        padding: 10px 15px;
+                        background: rgba(0, 0, 0, .6);
+                        color: #fff;
+                        .card__name {
+        
+                        }
+                    }
+                    &:not(:last-child) {
+                        margin: 0 21px 0 0;
+                    }
+                    .img-block {
+                        flex: 0 1 33.333%;
+                        .image {
+                            max-width: 100%;
+                            max-height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .section4-block {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .section5-block {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .section6-block {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .bg {
+        background: #222222;
+    }
 }
 
 .footer {
@@ -57,6 +158,7 @@
         font-size: 16px;
         color: rgba(255, 255, 255, 0.25);
         font-weight: 400;
+        text-decoration: none;
     }
     .social-block {
         height: 70px;
@@ -73,25 +175,5 @@
                 min-height: 100%;
             }
         }
-    }
-}
-
-.main {
-    position: relative;
-    background: url(../img/content/background.jpg) 0 70px no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: -1;
-}
-.section1 {
-    padding-top: 140px;
-}
-.section1-block {
-    width: 100%;
-    height: 356px;
-    .cover {
-        width: inherit;
-        min-height: 100%;
-        object-fit: cover;
     }
 }
