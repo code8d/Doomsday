@@ -124,6 +124,9 @@ body {
   background: #1c1c1c;
 }
 
+.footer-block {
+  padding: 0 25px;
+}
 .footer-block .author {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.25);
@@ -144,6 +147,29 @@ body {
 .footer-block .social-block .icon-block .icon {
   max-width: 100%;
   min-height: 100%;
+}
+
+.main {
+  position: relative;
+  background: url(../img/content/background.jpg) 0 70px no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.section1 {
+  padding-top: 140px;
+}
+
+.section1-block {
+  width: 100%;
+  height: 356px;
+}
+.section1-block .cover {
+  width: inherit;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body {

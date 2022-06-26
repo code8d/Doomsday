@@ -52,6 +52,7 @@
     background: #1c1c1c;
 }
 .footer-block {
+    padding: 0 25px;
     .author {
         font-size: 16px;
         color: rgba(255, 255, 255, 0.25);
@@ -72,5 +73,25 @@
                 min-height: 100%;
             }
         }
+    }
+}
+
+.main {
+    position: relative;
+    background: url(../img/content/background.jpg) 0 70px no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+}
+.section1 {
+    padding-top: 140px;
+}
+.section1-block {
+    width: 100%;
+    height: 356px;
+    .cover {
+        width: inherit;
+        min-height: 100%;
+        object-fit: cover;
     }
 }
