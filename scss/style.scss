@@ -76,12 +76,13 @@
         background-size: cover;
         background-attachment: fixed;
         z-index: -1;
-        flex: 2 1 100vh;
+        flex: 1 1 100vh;
         margin-top: -140px;
         .section1 {
             padding-top: 140px;
             .section1-block {
                 width: 100%;
+                width: 1120px;
                 height: 356px;
                 .cover {
                     width: inherit;
@@ -179,6 +180,10 @@
             color: rgba(255, 255, 255, 0.25);
             font-weight: 400;
             text-decoration: none;
+            transition: .2s ease;
+            &:hover {
+                color: #fff;
+            }
         }
         .social-block {
             height: 70px;
@@ -411,6 +416,34 @@
             }
             .bg {
                 background: #222222;
+            }
+        }
+        .footer-block {
+            padding: 0;
+            .author {
+                font-size: 16px;
+                color: rgba(255, 255, 255, 0.25);
+                font-weight: 400;
+                text-decoration: none;
+            }
+            .social-block {
+                height: 70px;
+                & > *:not(:last-child) {
+                    margin: 0 5px 0 0;
+                }
+                .icon-block {
+                    display: block;
+                    width: 25px;
+                    height: 25px;
+                    padding: 5px;
+                    &:last-child {
+                        padding: 5px 0 5px 5px;
+                    }
+                    .icon {
+                        max-width: 100%;
+                        min-height: 100%;
+                    }
+                }
             }
         }
     }
