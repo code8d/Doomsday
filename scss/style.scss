@@ -99,6 +99,82 @@
                 padding: 20px;
                 box-sizing: border-box;
             }
+            .table {
+                width: 100%;
+                .tbody {
+                    display: block;
+                    margin: -3px 0 0 -3px;
+                }
+            }
+            .table-row {
+                display: flex;
+                width: 100%;
+                .font {
+                    display: flex;
+                    align-items: center;
+                    margin: 0 0 20px 0;
+                    font-size: 20px;
+                    font-weight: 400;
+                    color: #D10001;
+                }
+                .table-heading1 {
+                    flex: 0 1 40%;
+                }
+                .table-heading2 {
+                    flex: 0 1 30%
+                }
+                .table-heading3 {
+                    flex: 0 1 30%;
+                    justify-content: flex-end;
+                }
+                .table-item {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    flex: 0 1 40%;
+                    color: #fff;
+                    & {
+                        margin: 0 0 10px 0;
+                    }
+                    .item__link {
+                        font-size: 16px;
+                        color: #fff;
+                        margin-left: 56px;
+                        text-decoration: none;
+                        transition: .1s ease-in-out;
+                        &:hover {
+                            color: #D10001;
+                        }
+                    }
+                    .icon-block {
+                        width: 24px;
+                        height: 24px;
+                        margin: 0 15px 0 0;
+                        .item__icon {
+                            max-width: 100%;
+                            min-height: 100%;
+                        }
+                    }
+                }
+                .table-item2 {
+                    flex: 0 1 30%;
+                }
+                .table-item3 {
+                    flex: 0 1 30%;
+                    justify-content: flex-end;
+                }
+                .number {
+                    display: flex;
+                    align-items: center;
+                    position: absolute;
+                    top: 0;
+                    left: 13px;
+                    height: 100%;
+                }
+                .last {
+                    margin: 0;
+                }
+            }
         }
         .section3 {
             .section3-block {
@@ -346,7 +422,7 @@
             height: 320px;
             margin: 0 -15px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            transition: 1s ease;
+            transition: 1s;
             .nav__list {
                 display: flex;
                 flex-direction: column;
@@ -571,6 +647,187 @@
             }
             .bg {
                 background: #222222;
+            }
+        }
+    }
+    @media (max-width: 587px) {
+        .main {
+            .section2 {
+                .table {
+                    width: 100%;
+                    .tbody {
+                        display: block;
+                        margin: -3px 0 0 -3px;
+                    }
+                }
+                .table-row {
+                    display: flex;
+                    width: 100%;
+                    .font {
+                        display: flex;
+                        align-items: center;
+                        margin: 0 0 20px 0;
+                        font-size: 20px;
+                        font-weight: 400;
+                        color: #D10001;
+                    }
+                    .table-heading1 {
+                        flex: 0 1 60%;
+                    }
+                    .table-heading2 {
+                        flex: 0 1 40%
+                    }
+                    .table-heading3 {
+                        display: none;
+                        flex: 0 1 0%;
+                        justify-content: flex-end;
+                    }
+                    .table-item {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        flex: 0 1 60%;
+                        color: #fff;
+                        & {
+                            margin: 0 0 10px 0;
+                        }
+                        .item__link {
+                            font-size: 16px;
+                            color: #fff;
+                            margin-left: 56px;
+                            text-decoration: none;
+                            transition: .1s ease-in-out;
+                            &:hover {
+                                color: #D10001;
+                            }
+                        }
+                        .icon-block {
+                            width: 24px;
+                            height: 24px;
+                            margin: 0 15px 0 0;
+                            .item__icon {
+                                max-width: 100%;
+                                min-height: 100%;
+                            }
+                        }
+                    }
+                    .table-item2 {
+                        flex: 0 1 40%
+                    }
+                    .table-item3 {
+                        display: none;
+                        flex: 0 1 0%;
+                        justify-content: flex-end;
+                    }
+                    .number {
+                        display: flex;
+                        align-items: center;
+                        position: absolute;
+                        top: 0;
+                        left: 13px;
+                        height: 100%;
+                    }
+                    .last {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 320px) {
+        .main {
+            .section2 {
+                .table {
+                    width: 100%;
+                    .tbody {
+                        display: block;
+                        margin: -3px 0 0 -3px;
+                    }
+                }
+                .table-row {
+                    display: flex;
+                    width: 100%;
+                    .font {
+                        display: flex;
+                        align-items: center;
+                        margin: 5px 0 20px 0;
+                        font-size: 20px;
+                        font-weight: 400;
+                        color: #D10001;
+                    }
+                    .title {
+                        &::before {
+                            display: none;
+                        }
+                }
+                    .table-heading1 {
+                        flex: 0 1 100%;
+                        justify-content: center;
+                    }
+                    .table-heading2 {
+                        display: none;
+                        flex: 0 1 0%
+                    }
+                    .table-heading3 {
+                        display: none;
+                        flex: 0 1 0%;
+                        justify-content: flex-end;
+                    }
+                    .table-item {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        flex: 0 1 60%;
+                        color: #fff;
+                        & {
+                            margin: 0 0 10px 0;
+                        }
+                        .item__link {
+                            font-size: 16px;
+                            color: #fff;
+                            margin-left: 43px;
+                            text-decoration: none;
+                            transition: .1s ease-in-out;
+                            &:hover {
+                                color: #D10001;
+                            }
+                        }
+                        .icon-block {
+                            display: flex;
+                            justify-content: flex-end;
+                            width: 24px;
+                            height: 24px;
+                            margin: 0;
+                            .item__icon {
+                                max-width: 100%;
+                                min-height: 100%;
+                            }
+                        }
+                        .nickname {
+                            display: none;
+                        }
+                    }
+                    .table-item2 {
+                        flex: 0 1 40%;
+                        justify-content: flex-end;
+                    }
+                    .table-item3 {
+                        display: none;
+                        flex: 0 1 0%;
+                        justify-content: flex-end;
+                    }
+                    .number {
+                        display: flex;
+                        align-items: center;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                    }
+                    .last {
+                        margin: 0;
+                    }
+                }
             }
         }
     }
