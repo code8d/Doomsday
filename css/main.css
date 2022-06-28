@@ -460,8 +460,8 @@ body {
     height: 320px;
     margin: 0 -15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    -webkit-transition: 1s ease;
-    transition: 1s ease;
+    -webkit-transition: 1s cubic-bezier(0.42, 0, 0.58, 1.07);
+    transition: 1s cubic-bezier(0.42, 0, 0.58, 1.07);
   }
   .header__nav-block .nav__list {
     display: -webkit-box;
